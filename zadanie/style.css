@@ -57,6 +57,16 @@ main {
     text-align: left; 
 }
 
+main h2 {
+    color: #191970;
+    font-size: 28px;
+}
+
+main p {
+    line-height: 1.6;
+    text-align: justify;
+}
+
 aside {
     width: 30%;
     min-height: 400px;
@@ -64,6 +74,11 @@ aside {
     padding: 20px;
     color: #000080; 
     font-size: 16px;
+}
+
+aside h2 {
+    color: #191970;
+    font-size: 22px;
 }
 
 footer {
