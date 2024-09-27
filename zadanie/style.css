@@ -107,3 +107,22 @@ img {
 img:hover {
     filter: brightness(50%);
 }
+
+table {
+    width: 90%;
+    border-collapse: collapse;
+    color: #ffffff;
+    background-color: #4682B4;
+    padding: 8px;
+    text-align: center;
+}
+
+table td {
+    padding: 8px;
+    border: 1px solid #ffffff;
+}
+
+table tr:nth-child(even) {
+    background-color: #B0C4DE;
+}
+
