@@ -48,12 +48,10 @@ nav a:hover {
 }
 
 main {
-    position: fixed;
-    left: 0;
+    float: left;
     width: 70%;
-    min-height: 400px;
-    background-color: #F0F8FF;
-    padding: 20px;
+    height: 400px;
+    background-color: #fdfff0;
     color: #000080;
     font-size: 18px;
     text-align: left;
@@ -70,12 +68,10 @@ main p {
 }
 
 aside {
-    position: fixed;
-    right: 0;
+    float: left;
     width: 30%;
     min-height: 400px;
-    background-color: #B0C4DE;
-    padding: 20px;
+    background-color: #B0C4DE;   
     color: #000080;
     font-size: 16px;
 }
@@ -86,8 +82,6 @@ aside h2 {
 }
 
 footer {
-    position: fixed;
-    bottom: 0;
     width: 100%;
     height: 60px;
     background-color: #1E90FF;
@@ -96,6 +90,8 @@ footer {
     justify-content: center;
     color: white;
     font-size: 14px;
+    clear: both;
+    position: relative;
 }
 
 footer a {
@@ -121,7 +117,7 @@ table {
     border-collapse: collapse;
     color: #ffffff;
     background-color: #4682B4;
-    padding: 8px;
+    padding: 10px;
     text-align: center;
 }
 
