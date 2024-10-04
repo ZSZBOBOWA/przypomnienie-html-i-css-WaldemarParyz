@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salon kosmetyczny</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav>
+        <h2>Nasza oferta</h2>
+        <ol>
+            <li><a href="twarz.html">Oczyszczenie twarzy</a>
+                <ul>
+                    <li>Peeling</li>
+                    <li>Maska</li>
+                </ul>
+            </li>
+            <li>Masaż</li>
+            <li>Makijaż</li>
+        </ol>
+        <a href="index.html" class="odsyłacz">Strona główna</a>
+    </nav>
+    <header>
+        <h1>Usługi kosmetyczne</h1>
+    </header>
+    <main>
+        <p>Kalkulator ceny wizyty</p>
+        <div class="calculator">
+            <form id="visitCalculator">
+                <label><input type="checkbox" name="service" value="Peeling"> Peeling</label><br>
+                <label><input type="checkbox" name="service" value="Maska" checked> Maska</label><br>
+                <label><input type="checkbox" name="service" value="Masaż twarzy" checked> Masaż twarzy</label><br>
+                <label><input type="checkbox" name="service" value="Makijaż" checked> Makijaż</label><br><br>
+                <button type="button" onclick="calculatePrice()">Oblicz cenę</button>
+            </form>
+    
+            <p id="result"></p>
+        </div>
+        <h3>Telefon: 111 222 333</h3>
+    </main>
+    <aside>
+        <img src="obraz1.jpg" class="img1" alt="Personel">
+    </aside>
+    <footer>
+        <p>Autor: Waldemar Olszanecki</p>
+    </footer>
+</body>
+<script>
+    function calculatePrice() {
+        const checkboxes = document.querySelectorAll('input[name="service"]:checked');
+        let price = 0;
+
+        checkboxes.forEach((checkbox) => {
+            switch(checkbox.value) {
+                case "Peeling":
+                    price += 45;
+                    break;
+                case "Maska":
+                    price += 30;
+                    break;
+                case "Masaż twarzy":
+                    price += 20;
+                    break;
+                case "Makijaż":
+                    price += 50;
+                    break;
+            }
+        });
+
+        document.getElementById("result").innerText = "Całkowity koszt: " + price + " zł";
+    }
+</script>
+</html>
